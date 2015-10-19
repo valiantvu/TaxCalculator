@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="gold_bg" translatesAutoresizingMaskIntoConstraints="NO" id="juR-97-bRQ">
+                                <rect key="frame" x="0.0" y="0.0" width="644" height="609"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WJq-aq-nea">
+                                <rect key="frame" x="238" y="285" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Hlo-Aa-dRR">
+                                <rect key="frame" x="203" y="232" width="162" height="29"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <segments>
+                                    <segment title="CA"/>
+                                    <segment title="CHI"/>
+                                    <segment title="NY"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="00Q-1C-LTF">
+                                <rect key="frame" x="238" y="331" width="92" height="30"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Calculate Tax">
+                                            <attributes>
+                                                <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <font key="NSFont" size="15" name="HelveticaNeue"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="onCalculateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cBj-QU-9pc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j09-ka-J5h">
+                                <rect key="frame" x="240" y="395" width="89" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Sale's tax">
+                                        <attributes>
+                                            <color key="NSColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="highlightedColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="juR-97-bRQ" secondAttribute="trailing" id="6KF-ir-ipg"/>
+                            <constraint firstAttribute="centerX" secondItem="00Q-1C-LTF" secondAttribute="centerX" id="7MU-tQ-zCQ"/>
+                            <constraint firstAttribute="centerX" secondItem="Hlo-Aa-dRR" secondAttribute="centerX" id="Bk9-Yr-7fp"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="juR-97-bRQ" secondAttribute="bottom" id="FDE-24-70a"/>
+                            <constraint firstAttribute="centerX" secondItem="j09-ka-J5h" secondAttribute="centerX" id="NNz-tg-ozi"/>
+                            <constraint firstItem="WJq-aq-nea" firstAttribute="top" secondItem="Hlo-Aa-dRR" secondAttribute="bottom" constant="30" id="QMg-WZ-X6H"/>
+                            <constraint firstItem="juR-97-bRQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="Tfl-mN-oWD"/>
+                            <constraint firstAttribute="centerX" secondItem="00Q-1C-LTF" secondAttribute="centerX" id="U72-QJ-ttF"/>
+                            <constraint firstItem="juR-97-bRQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="VyN-d6-gX4"/>
+                            <constraint firstAttribute="centerX" secondItem="WJq-aq-nea" secondAttribute="centerX" id="Xzd-6d-U4f"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="juR-97-bRQ" secondAttribute="bottom" id="YRw-W1-9Xa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="juR-97-bRQ" secondAttribute="trailing" id="ZzP-rw-0WD"/>
+                            <constraint firstItem="j09-ka-J5h" firstAttribute="top" secondItem="00Q-1C-LTF" secondAttribute="bottom" constant="30" id="gRC-Wx-ecC"/>
+                            <constraint firstAttribute="centerX" secondItem="j09-ka-J5h" secondAttribute="centerX" id="l6N-0k-bUE"/>
+                            <constraint firstAttribute="centerX" secondItem="Hlo-Aa-dRR" secondAttribute="centerX" id="nwS-AN-5dS"/>
+                            <constraint firstItem="00Q-1C-LTF" firstAttribute="top" secondItem="WJq-aq-nea" secondAttribute="bottom" constant="30" id="su4-IZ-3sW"/>
+                            <constraint firstItem="juR-97-bRQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ueG-3t-YFf"/>
+                            <constraint firstItem="juR-97-bRQ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="uzL-HG-SAh"/>
+                            <constraint firstAttribute="centerX" secondItem="WJq-aq-nea" secondAttribute="centerX" id="xoK-N4-d8a"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="priceTextField" destination="WJq-aq-nea" id="VBE-6n-xVd"/>
+                        <outlet property="resultLabel" destination="j09-ka-J5h" id="egm-Hx-1Jy"/>
+                        <outlet property="segmentedControl" destination="Hlo-Aa-dRR" id="R7z-Z0-MkO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="gold_bg" width="160" height="284"/>
+    </resources>
+</document>
